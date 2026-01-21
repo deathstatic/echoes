@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NOISE</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ffcc;
+      font-family: monospace;
+      text-align: center;
+      padding-top: 100px;
+    }
+    input {
+      background: black;
+      color: #00ffcc;
+      border: 1px solid #00ffcc;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!--
+You’re not supposed to see this.
+
+If you decoded the echo,
+you already know the word.
+
+Try adding it to the URL.
+-->
+
+
+<h1>THE NOISE IS REAL</h1>
+
+<p>You followed the echo.</p>
+<p>Now prove you understood it.</p>
+
+<p>What never disappears?</p>
+
+<input type="text" id="answer" placeholder="answer...">
+<br><br>
+<button onclick="check()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function check() {
+  const ans = document.getElementById("answer").value.toLowerCase();
+  if(ans === "noise") {
+    document.getElementById("result").innerHTML = "Correct.<br><br>flag{1l_c4s0_d3l_d4rk_w3b}";
+  } else {
+    document.getElementById("result").innerHTML = "Wrong.";
+  }
+}
+</script>
+
+</body>
+</html>
